@@ -1,0 +1,9 @@
+**/mysql-connector.jar
+**/set
+**/.settings
+**/bin
+**/.classpath
+**/.project
+**/target
+
+
