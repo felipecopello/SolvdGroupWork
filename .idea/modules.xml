@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FlightFinder/FlightFinder.iml" filepath="$PROJECT_DIR$/FlightFinder/FlightFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SolvdGroupWork.iml" filepath="$PROJECT_DIR$/.idea/SolvdGroupWork.iml" />
+    </modules>
+  </component>
+</project>
