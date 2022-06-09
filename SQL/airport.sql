@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `airportlaba`.`Cities` (
 CREATE TABLE IF NOT EXISTS `airportlaba`.`Airports` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `latitude` INT NOT NULL,
-  `longitude` INT NOT NULL,
+  `latitude` VARCHAR(45) NOT NULL,
+  `longitude` VARCHAR(45) NOT NULL,
   `city_id` INT NOT NULL,
   PRIMARY KEY (`id`),
 	FOREIGN KEY (`city_id`)
