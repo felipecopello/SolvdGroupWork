@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `airportlaba`.`Cities` (
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
--- Latitude and longitude roundep up to closest number on grades --
+-- Latitude and longitude rounded up to closest number on grades --
 CREATE TABLE IF NOT EXISTS `airportlaba`.`Airports` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
