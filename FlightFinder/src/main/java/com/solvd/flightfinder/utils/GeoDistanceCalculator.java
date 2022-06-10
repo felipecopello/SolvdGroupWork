@@ -1,4 +1,4 @@
-package com.solvd.flightfinder.entities.utils;
+package com.solvd.flightfinder.utils;
 
 public class GeoDistanceCalculator {
 
