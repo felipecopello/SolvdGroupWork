@@ -20,7 +20,11 @@ VALUES ("Islas Malvinas", "-32.90", "-60.79", (SELECT id FROM Cities WHERE name 
 ("Haneda", "35.33", "139.46", (SELECT id FROM Cities WHERE name = "Tokyo")),
 ("Minsk International", "53.52", "28.01", (SELECT id FROM Cities WHERE name = "Minsk")),
 ("Perth Airport", "-31.56", "115.58", (SELECT id FROM Cities WHERE name = "Perth")),
+<<<<<<< HEAD
 ("Sidney-Richland Airport", "-33.95", "151.18", (SELECT id FROM Cities WHERE name = "Sidney"));
+=======
+("Sidney-Richland Airport", "-37.00", "174.47", (SELECT id FROM Cities WHERE name = "Sidney"));
+>>>>>>> c40e3a6cfd4ea84324d06dfbec5c1f79832e1746
 
 INSERT INTO Airlines (name)
 VALUES ("FlyBondi"),
@@ -150,5 +154,3 @@ VALUES ((SELECT id FROM Flights WHERE hours_duration = 25.00 and price_in_usd = 
 ((SELECT id FROM Flights WHERE hours_duration = 11.50 and price_in_usd = 750), (SELECT id FROM Passengers WHERE name = "Cinthia Pardo")),
 ((SELECT id FROM Flights WHERE hours_duration = 12.50 and price_in_usd = 950), (SELECT id FROM Passengers WHERE name = "Martin Galperin")),
 ((SELECT id FROM Flights WHERE hours_duration = 24.50 and price_in_usd = 1500), (SELECT id FROM Passengers WHERE name = "Thomas Scamacca"));
-
-
