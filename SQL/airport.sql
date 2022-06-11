@@ -38,7 +38,6 @@ CREATE TABLE IF NOT EXISTS `airportlaba`.`Flights` (
   `id` INT NOT NULL,
   `departure_airport_id` INT NOT NULL,
   `arrival_airport_id` INT NOT NULL,
-  `hours_duration` DOUBLE NOT NULL,
   `price_in_usd` INT NOT NULL,
   `airline_id` INT NOT NULL,
   PRIMARY KEY (`id`),
