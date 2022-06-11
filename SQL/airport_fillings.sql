@@ -46,6 +46,7 @@ VALUES ("Mirta Delville", 56),
 ("Pablo Duran", 72),
 ("Carlos Borda", 34);
 
+
 INSERT INTO Flights (id, departure_airport_id, arrival_airport_id, price_in_usd, airline_id)
 VALUES (21435, (SELECT id FROM Airports WHERE name = "Islas Malvinas"), (SELECT id FROM Airports WHERE name = "Ambrosio Taravella"), 211, (SELECT id FROM Airlines WHERE name = "FlyBondi")), 
 (51916, (SELECT id FROM Airports WHERE name = "Islas Malvinas"), (SELECT id FROM Airports WHERE name = "Haneda"), 1500, (SELECT id FROM Airlines WHERE name = "Avianca")),
@@ -86,6 +87,7 @@ VALUES (21435, (SELECT id FROM Airports WHERE name = "Islas Malvinas"), (SELECT 
 (23464, (SELECT id FROM Airports WHERE name = "Sidney-Richland Airport"), (SELECT id FROM Airports WHERE name = "Minsk International"), 750, (SELECT id FROM Airlines WHERE name = "FlyBondi")),
 (62008, (SELECT id FROM Airports WHERE name = "Sidney-Richland Airport"), (SELECT id FROM Airports WHERE name = "Minsk International"), 950, (SELECT id FROM Airlines WHERE name = "Gol Linhas Aereas")),
 (49723, (SELECT id FROM Airports WHERE name = "Sidney-Richland Airport"), (SELECT id FROM Airports WHERE name = "Perth Airport"), 200, (SELECT id FROM Airlines WHERE name = "American Airlines"));
+
 
 INSERT INTO Hired_Airlines (airport_id, airline_id)
 VALUES ((SELECT id FROM Airports WHERE name = "Islas Malvinas"), (SELECT id FROM Airlines WHERE name = "FlyBondi")),
