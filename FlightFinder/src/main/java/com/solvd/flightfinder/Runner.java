@@ -8,5 +8,6 @@ public class Runner {
 
 	public static void main(String[] args) {
 		LOGGER.info("------Welcome to flight finder------");
+
 	}
 }

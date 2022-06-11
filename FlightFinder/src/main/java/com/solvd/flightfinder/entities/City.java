@@ -8,8 +8,8 @@ public class City {
 	public City() {
 	}
 
-	public City(int cityId, String name, Country locationCountry) {
-		this.cityId = cityId;
+	public City(int id, String name, Country locationCountry) {
+		this.cityId = id;
 		this.name = name;
 		this.setLocationCountry(locationCountry);
 	}
@@ -26,8 +26,8 @@ public class City {
 		return cityId;
 	}
 
-	public void setCityId(long cityId) {
-		this.cityId = cityId;
+	public void setCityId(long id) {
+		this.cityId = id;
 	}
 
 	public String getName() {
@@ -36,6 +36,11 @@ public class City {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "City [id=" + cityId + ", name=" + name + ", locationCountry=" + locationCountry + "]";
 	}
 
 }

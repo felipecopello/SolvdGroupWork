@@ -37,4 +37,9 @@ public class Ticket {
 	public void setPassenger(Passenger passenger) {
 		this.passenger = passenger;
 	}
+
+	@Override
+	public String toString() {
+		return "Ticket [ticketId=" + ticketId + ", flight=" + flight + ", passenger=" + passenger + "]";
+	}
 }
