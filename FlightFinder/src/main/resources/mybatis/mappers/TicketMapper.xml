@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.flightfinder.interfaces.TicketMapper">
+   <resultMap id="TicketResultMap" type="com.solvd.flightfinder.entities.Ticket" autoMapping="false">
+      <result column="id" property="ticketId" />
+	  <association property="flight" column="flight_id" javaType="com.solvd.flightfinder.entities.Flight" select="com.solvd.flightfinder.interfaces.FlightMapper.getById"/>
+	  <association property="passenger" column="passenger_id" javaType="com.solvd.flightfinder.entities.Passenger" select="com.solvd.flightfinder.interfaces.PassengerMapper.getById"/>
+   </resultMap>
+   <select id="getById" parameterType="Long" resultMap="TicketResultMap">
+	  Select * from Fly_Tickets where ticket_id =#{ticketId}
+   </select>
+
+   <select id="getAll" resultMap="TicketResultMap">
+	  Select * from Fly_Tickets
+   </select>
+   <delete id="delete">
+	  Delete from Fly_Tickets where ticket_id =#{ticketId}
+   </delete>
+   <insert id="save" useGeneratedKeys="true" keyProperty="ticket_id">
+	  Insert into Fly_Tickets (ticket_id,flight_id,passenger_id)
+  	  Values (#{ticketId},#{flight},#{passenger})
+   </insert>
+   <update id="update">
+	  Update Fly_Tickets Set
+	  flight_id = #{flight}
+      passenger_id = #{passenger}
+	  where ticket_id = #{ticketId}
+   </update>
+</mapper>

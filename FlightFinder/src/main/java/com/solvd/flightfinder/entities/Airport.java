@@ -10,8 +10,8 @@ public class Airport {
 	public Airport() {
 	}
 
-	public Airport(long airportId, String name, float latitude, float longitude, City cityLocation) {
-		this.airportId = airportId;
+	public Airport(long id, String name, float latitude, float longitude, City cityLocation) {
+		this.airportId = id;
 		this.name = name;
 		this.latitude = latitude;
 		this.longitude = longitude;
@@ -22,8 +22,8 @@ public class Airport {
 		return airportId;
 	}
 
-	public void setAirportId(long airportId) {
-		this.airportId = airportId;
+	public void setAirportId(long id) {
+		this.airportId = id;
 	}
 
 	public String getName() {
@@ -56,6 +56,12 @@ public class Airport {
 
 	public void setCityLocation(City cityLocation) {
 		this.cityLocation = cityLocation;
+	}
+
+	@Override
+	public String toString() {
+		return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude=" + longitude
+				+ ", cityLocation=" + cityLocation + "]";
 	}
 
 }

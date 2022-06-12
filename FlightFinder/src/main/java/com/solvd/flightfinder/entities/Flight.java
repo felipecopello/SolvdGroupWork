@@ -6,19 +6,19 @@ public class Flight {
 	private Airport arrivalAirport;
 	private String flightDuration;
 	private int price;
-	private int airlineId;
+	private Airline airline;
 
 	public Flight() {
 	}
 
 	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDuration, int price,
-			int airlineId) {
+			Airline airline) {
 		this.flightId = flightId;
 		this.departureAirport = departureAirport;
 		this.arrivalAirport = arrivalAirport;
 		this.flightDuration = flightDuration;
 		this.price = price;
-		this.airlineId = airlineId;
+		this.airline = airline;
 	}
 
 	public long getFlightId() {
@@ -61,11 +61,18 @@ public class Flight {
 		this.price = price;
 	}
 
-	public int getAirlineId() {
-		return airlineId;
+	public Airline getAirlineId() {
+		return airline;
 	}
 
-	public void setAirlineId(int airlineId) {
-		this.airlineId = airlineId;
+	public void setAirlineId(Airline airline) {
+		this.airline = airline;
+	}
+
+	@Override
+	public String toString() {
+		return "Flight [flightId=" + flightId + ", departureAirport=" + departureAirport + ", arrivalAirport="
+				+ arrivalAirport + ", flightDuration=" + flightDuration + ", price=" + price + ", airline=" + airline
+				+ "]";
 	}
 }

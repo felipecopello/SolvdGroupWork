@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.flightfinder.interfaces.CountryMapper">
+   <resultMap id="CountryResultMap" type="com.solvd.flightfinder.entities.Country" autoMapping="false">
+      <result column="id" property="countryId" />
+      <result column="name" property="name" />
+   </resultMap>
+   <select id="getById" parameterType="Long" resultMap="CountryResultMap">
+	  Select * from Countries where id =#{countryId}
+   </select>
+
+   <select id="getAll" resultMap="CountryResultMap">
+	  Select * from Countries
+   </select>
+   <delete id="delete">
+	  Delete from Countries where id =#{countryId}
+   </delete>
+   <insert id="save" useGeneratedKeys="true" keyProperty="id">
+	  Insert into Countries (id,name)
+  	  Values (#{countryId},#{name})
+   </insert>
+   <update id="update">
+	  Update Countries Set
+	  name = #{name}
+	  where id = #{countryId}
+   </update>
+</mapper>

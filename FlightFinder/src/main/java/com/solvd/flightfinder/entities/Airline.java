@@ -7,8 +7,8 @@ public class Airline {
 	public Airline() {
 	}
 
-	public Airline(long airlineId, String name) {
-		this.airlineId = airlineId;
+	public Airline(long id, String name) {
+		this.airlineId = id;
 		this.name = name;
 	}
 
@@ -16,8 +16,8 @@ public class Airline {
 		return airlineId;
 	}
 
-	public void setAirlineId(long airlineId) {
-		this.airlineId = airlineId;
+	public void setAirlineId(long id) {
+		this.airlineId = id;
 	}
 
 	public String getName() {
@@ -26,5 +26,10 @@ public class Airline {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Airline [id=" + airlineId + ", name=" + name + "]";
 	}
 }

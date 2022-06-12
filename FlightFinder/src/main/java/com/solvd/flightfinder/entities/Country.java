@@ -7,8 +7,7 @@ public class Country {
 	public Country() {
 	}
 
-	public Country(int countryId, String name) {
-		this.countryId = countryId;
+	public Country(String name) {
 		this.name = name;
 	}
 
@@ -26,6 +25,11 @@ public class Country {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Country [countryId=" + countryId + ", name=" + name + "]";
 	}
 
 }
