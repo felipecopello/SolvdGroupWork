@@ -1,18 +1,16 @@
 package com.solvd.flightfinder;
 
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.solvd.flightfinder.interfaces.AirlineMapper;
 import com.solvd.flightfinder.interfaces.FlightMapper;
-
-import util.SqlSessionFactoryUtil;
+import com.solvd.flightfinder.utils.MyBatisFactory;
 
 public class MyBatisTrialRunner {
 	private static final Logger LOGGER = LogManager.getLogger(Runner.class);
-	private static SqlSessionFactory factory = SqlSessionFactoryUtil.getInstance();
-	private static SqlSession session = factory.openSession();
+	private static SqlSession session = MyBatisFactory.getSession();
 
 	public static void main(String[] args) {
 		LOGGER.info("------Welcome to flight finder------");
@@ -25,6 +23,8 @@ public class MyBatisTrialRunner {
 //			PassengerMapper passengerMapper = session.getMapper(PassengerMapper.class);
 //			AirlineMapper airlineMapper = session.getMapper(AirlineMapper.class);
 			FlightMapper flightMapper = session.getMapper(FlightMapper.class);
+			AirlineMapper airlineMapper = (AirlineMapper) MyBatisFactory.getMyBatis("airline");
+			airlineMapper.getAll();
 ////			Country uruguay = new Country("Uruguay");
 ////			countryMapper.save(uruguay);
 //			LOGGER.info(countryMapper.getById(2));
