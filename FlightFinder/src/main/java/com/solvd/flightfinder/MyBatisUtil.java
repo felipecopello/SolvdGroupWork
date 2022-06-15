@@ -1,20 +1,14 @@
 package com.solvd.flightfinder;
 
-import java.util.List;
-
+import com.solvd.flightfinder.entities.City;
+import com.solvd.flightfinder.interfaces.*;
+import com.solvd.flightfinder.utils.SqlSessionFactoryUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.solvd.flightfinder.entities.City;
-import com.solvd.flightfinder.interfaces.AirlineMapper;
-import com.solvd.flightfinder.interfaces.AirportMapper;
-import com.solvd.flightfinder.interfaces.CityMapper;
-import com.solvd.flightfinder.interfaces.CountryMapper;
-import com.solvd.flightfinder.interfaces.PassengerMapper;
-
-import util.SqlSessionFactoryUtil;
+import java.util.List;
 
 public class MyBatisUtil {
 	private static final Logger LOGGER = LogManager.getLogger(Runner.class);

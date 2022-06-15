@@ -4,19 +4,19 @@ public class Flight {
 	private long flightId;
 	private Airport departureAirport;
 	private Airport arrivalAirport;
-	private String flightDuration;
+	private String flightDistance;
 	private int price;
 	private Airline airline;
 
 	public Flight() {
 	}
 
-	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDuration, int price,
-			Airline airline) {
+	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDistance, int price,
+				  Airline airline) {
 		this.flightId = flightId;
 		this.departureAirport = departureAirport;
 		this.arrivalAirport = arrivalAirport;
-		this.flightDuration = flightDuration;
+		this.flightDistance = flightDistance;
 		this.price = price;
 		this.airline = airline;
 	}
@@ -45,12 +45,12 @@ public class Flight {
 		this.arrivalAirport = arrivalAirport;
 	}
 
-	public String getFlightDuration() {
-		return flightDuration;
+	public String getFlightDistance() {
+		return flightDistance;
 	}
 
-	public void setFlightDuration(String flightDuration) {
-		this.flightDuration = flightDuration;
+	public void setFlightDistance(String flightDistance) {
+		this.flightDistance = flightDistance;
 	}
 
 	public int getPrice() {
@@ -72,7 +72,7 @@ public class Flight {
 	@Override
 	public String toString() {
 		return "Flight [flightId=" + flightId + ", departureAirport=" + departureAirport + ", arrivalAirport="
-				+ arrivalAirport + ", flightDuration=" + flightDuration + ", price=" + price + ", airline=" + airline
+				+ arrivalAirport + ", flightDuration=" + flightDistance + ", price=" + price + ", airline=" + airline
 				+ "]";
 	}
 }
