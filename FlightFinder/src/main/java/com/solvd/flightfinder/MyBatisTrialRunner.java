@@ -9,7 +9,7 @@ import com.solvd.flightfinder.interfaces.FlightMapper;
 import com.solvd.flightfinder.utils.MyBatisFactory;
 
 public class MyBatisTrialRunner {
-	private static final Logger LOGGER = LogManager.getLogger(Runner.class);
+	private static final Logger LOGGER = LogManager.getLogger(MyBatisTrialRunner.class);
 	private static SqlSession session = MyBatisFactory.getSession();
 
 	public static void main(String[] args) {
