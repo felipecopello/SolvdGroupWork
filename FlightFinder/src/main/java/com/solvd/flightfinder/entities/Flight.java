@@ -11,10 +11,11 @@ public class Flight {
 	public Flight() {
 	}
 
-	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, int price, Airline airline) {
+	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDistance, int price, Airline airline) {
 		this.flightId = flightId;
 		this.departureAirport = departureAirport;
 		this.arrivalAirport = arrivalAirport;
+		this.flightDistance = flightDistance;
 		this.price = price;
 		this.airline = airline;
 	}
@@ -47,8 +48,8 @@ public class Flight {
 		return flightDistance;
 	}
 
-	public void setFlightDistance(String flightDuration) {
-		this.flightDistance = flightDuration;
+	public void setFlightDistance(String flightDistance) {
+		this.flightDistance = flightDistance;
 	}
 
 	public int getPrice() {
