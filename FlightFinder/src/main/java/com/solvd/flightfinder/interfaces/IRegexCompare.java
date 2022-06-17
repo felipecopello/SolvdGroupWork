@@ -1,4 +1,4 @@
-package com.solvd.flightfinder.ui.interfaces;
+package com.solvd.flightfinder.interfaces;
 
 @FunctionalInterface
 public interface IRegexCompare {

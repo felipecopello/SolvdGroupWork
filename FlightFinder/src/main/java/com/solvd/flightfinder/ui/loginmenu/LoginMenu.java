@@ -1,5 +1,6 @@
 package com.solvd.flightfinder.ui.loginmenu;
 
+import com.solvd.flightfinder.entities.Passenger;
 import com.solvd.flightfinder.ui.AbstractMenuEnum;
 import com.solvd.flightfinder.ui.mainmenu.MainMenu;
 import org.apache.logging.log4j.LogManager;
@@ -9,7 +10,6 @@ public class LoginMenu extends AbstractMenuEnum<LoginMenuEnum> {
     private final static Logger LOGGER = LogManager.getLogger(LoginMenu.class);
 
     public LoginMenu() {
-        LOGGER.info("Printing Login Menu");
         LoginMenuEnum option = changeOption(LoginMenuEnum.class);
         manageCases(option);
     }
@@ -17,12 +17,12 @@ public class LoginMenu extends AbstractMenuEnum<LoginMenuEnum> {
     public void manageCases(LoginMenuEnum result) {
         switch (result) {
             case LOGIN:
-
-                new MainMenu(/*pass user*/);
-                //TODO implement login.
+                Passenger passenger = new Passenger(1,"Carlos", 23);
+                new MainMenu(passenger);
+                //TODO implement login. check with the boys. select user from the user db? maybe xd.
                 break;
             case SIGN_UP:
-                //TODO user functionality/delete this option/add another.
+                //TODO add user to the db.
                 break;
             case EXIT:
                 break;

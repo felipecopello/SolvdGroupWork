@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.solvd.flightfinder.interfaces.AirlineMapper">
-   <resultMap id="AirlineResultMap" type="com.solvd.flightfinder.entities.Airline" autoMapping="false">
-      <result column="id" property="airlineId" />
-      <result column="name" property="name" />
-   </resultMap>
-   <select id="getById" parameterType="Long" resultMap="AirlineResultMap">
-	  Select * from Airlines where id =#{airlineId}
-   </select>
+    <resultMap id="AirlineResultMap" type="com.solvd.flightfinder.entities.Airline" autoMapping="false">
+        <result column="id" property="airlineId"/>
+        <result column="name" property="name"/>
+    </resultMap>
+    <select id="getById" parameterType="Long" resultMap="AirlineResultMap">
+        Select *
+        from Airlines
+        where id = #{airlineId}
+    </select>
 
-   <select id="getAll" resultMap="AirlineResultMap">
-	  Select * from Airlines
-   </select>
-   <delete id="delete">
-	  Delete from Airlines where id =#{airlineId}
-   </delete>
-   <insert id="save" useGeneratedKeys="true" keyProperty="id">
-	  Insert into Airlines (id,name)
-  	  Values (#{airlineId},#{name})
-   </insert>
-   <update id="update">
-	  Update Airlines Set
-	  name = #{name}
-	  where id = #{airlineId}
-   </update>
+    <select id="getAll" resultMap="AirlineResultMap">
+        Select *
+        from Airlines
+    </select>
+    <delete id="delete">
+        Delete
+        from Airlines
+        where id = #{airlineId}
+    </delete>
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        Insert into Airlines (id, name)
+        Values (#{airlineId}, #{name})
+    </insert>
+    <update id="update">
+        Update Airlines
+        Set name = #{name}
+        where id = #{airlineId}
+    </update>
 </mapper>

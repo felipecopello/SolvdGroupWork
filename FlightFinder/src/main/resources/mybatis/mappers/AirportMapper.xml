@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.solvd.flightfinder.interfaces.AirportMapper">
-   <resultMap id="AirportResultMap" type="com.solvd.flightfinder.entities.Airport" autoMapping="false">
-      <result column="id" property="airportId" />
-      <result column="name" property="name" />
-	  <result column="latitude" property="latitude" />
-	  <result column="longitude" property="longitude" />
-	  <association property="cityLocation" column="city_id" javaType="com.solvd.flightfinder.entities.City" select="com.solvd.flightfinder.interfaces.CityMapper.getById"/>
-   </resultMap>
-   <select id="getById" parameterType="Long" resultMap="AirportResultMap">
-	  Select * from Airports where id =#{airportId}
-   </select>
+    <resultMap id="AirportResultMap" type="com.solvd.flightfinder.entities.Airport" autoMapping="false">
+        <result column="id" property="airportId"/>
+        <result column="name" property="name"/>
+        <result column="latitude" property="latitude"/>
+        <result column="longitude" property="longitude"/>
+        <association property="cityLocation" column="city_id" javaType="com.solvd.flightfinder.entities.City"
+                     select="com.solvd.flightfinder.interfaces.CityMapper.getById"/>
+    </resultMap>
+    <select id="getById" parameterType="Long" resultMap="AirportResultMap">
+        Select *
+        from Airports
+        where id = #{airportId}
+    </select>
 
-   <select id="getAll" resultMap="AirportResultMap">
-	  Select * from Airports
-   </select>
-   <delete id="delete">
-	  Delete from Airports where id =#{airportId}
-   </delete>
-   <insert id="save" useGeneratedKeys="true" keyProperty="id">
-	  Insert into Airports (id,name,latitude,longitude,city_id)
-  	  Values (#{airportId},#{name},#{latitude},#{longitude},#{cityLocation})
-   </insert>
-   <update id="update">
-	  Update Airports Set
-	  name = #{name}
-      latitude = #{latitude}
-	  longitude = #{longitude}
-	  city_id = #{cityLocation}
-	  where id = #{airportId}
-   </update>
+    <select id="getAll" resultMap="AirportResultMap">
+        Select *
+        from Airports
+    </select>
+    <delete id="delete">
+        Delete
+        from Airports
+        where id = #{airportId}
+    </delete>
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        Insert into Airports (id, name, latitude, longitude, city_id)
+        Values (#{airportId}, #{name}, #{latitude}, #{longitude}, #{cityLocation})
+    </insert>
+    <update id="update">
+        Update Airports
+        Set name = #{name} latitude = #{latitude}
+            longitude = #{longitude}
+            city_id = #{cityLocation}
+        where id = #{airportId}
+    </update>
 </mapper>

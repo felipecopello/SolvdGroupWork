@@ -1,6 +1,6 @@
 package com.solvd.flightfinder.ui;
 
-import com.solvd.flightfinder.ui.interfaces.IShowDate;
+import com.solvd.flightfinder.interfaces.IShowDate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,4 +1,4 @@
-package com.solvd.flightfinder.ui.interfaces;
+package com.solvd.flightfinder.interfaces;
 
 import java.util.Date;
 

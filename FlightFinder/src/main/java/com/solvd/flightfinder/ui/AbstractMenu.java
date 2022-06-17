@@ -1,7 +1,7 @@
 package com.solvd.flightfinder.ui;
 
-import com.solvd.flightfinder.ui.interfaces.IRegexCompare;
-import com.solvd.flightfinder.ui.interfaces.IUi;
+import com.solvd.flightfinder.interfaces.IRegexCompare;
+import com.solvd.flightfinder.interfaces.IUi;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

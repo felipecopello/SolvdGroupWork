@@ -1,23 +1,22 @@
 package com.solvd.flightfinder.ui.countriesmenu;
 
-import com.solvd.flightfinder.ui.AbstractMenuEnum;
+import com.solvd.flightfinder.entities.Passenger;
 import com.solvd.flightfinder.ui.mainmenu.MainMenu;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class CountriesMenu extends AbstractMenuEnum<CountriesMenuEnum>{
+public class CountriesMenu {
     private final static Logger LOGGER = LogManager.getLogger(CountriesMenu.class);
-    //private final User user;
+    private final Passenger passenger;
 
-    public CountriesMenu(/*User user*/) {
-        //this.user = user;
-        LOGGER.info("Printing Countries Menu");
-        CountriesMenuEnum option = changeOption(CountriesMenuEnum.class);
-        manageCases(option);
-        MainMenu mainMenu = new MainMenu(/*user*/);
+    public CountriesMenu(Passenger passenger) {
+        this.passenger = passenger;
+        manageCases();
+        MainMenu mainMenu = new MainMenu(passenger);
     }
 
-    public void manageCases(CountriesMenuEnum result) {
-        //TODO check execution flow
+    public void manageCases() {
+        //TODO call for countries in the database and print them with a stream.
+
     }
 }
