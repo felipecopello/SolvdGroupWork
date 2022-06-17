@@ -2,15 +2,15 @@ package com.solvd.flightfinder.utils;
 
 import com.solvd.flightfinder.entities.Airport;
 import com.solvd.flightfinder.entities.Flight;
-import com.solvd.flightfinder.entities.FlightsWithConnections;
+import com.solvd.flightfinder.entities.FlightWithConnection;
 
 import java.util.List;
 
 public class FilterUtil {
 
     //gets the total of price and distance from a flights list
-    public static FlightsWithConnections joinFlights(List<Flight> flightList) {
-        FlightsWithConnections flightsWithConnections = new FlightsWithConnections();
+    public static FlightWithConnection joinFlights(List<Flight> flightList) {
+        FlightWithConnection flightsWithConnection = new FlightWithConnection();
         int price = 0;
         double distance = 0;
         for (Flight flight: flightList){
@@ -20,27 +20,27 @@ public class FilterUtil {
             distance = distance + GeoDistanceCalculator.distance(departure.getLatitude(), departure.getLongitude(), arrival.getLatitude(), arrival.getLongitude());
         }
         String distanceString = String.valueOf(distance);
-        flightsWithConnections.setPrice(price);
-        flightsWithConnections.setFlightDistance(distanceString);
-        return flightsWithConnections;
+        flightsWithConnection.setPrice(price);
+        flightsWithConnection.setFlightDistance(distanceString);
+        return flightsWithConnection;
     }
 
-    public static int getCheapestBigFlight(List<FlightsWithConnections> flightList) {
-        FlightsWithConnections cheapestBigFlight = new FlightsWithConnections();
+    public static int getCheapestBigFlight(List<FlightWithConnection> flightList) {
+        FlightWithConnection cheapestBigFlight = new FlightWithConnection();
         int price = flightList.get(0).getPrice();
-        for (FlightsWithConnections flightsWithConnections: flightList){
-            if (flightsWithConnections.getPrice() < price) {
-                price = flightsWithConnections.getPrice();
+        for (FlightWithConnection flightsWithConnection : flightList){
+            if (flightsWithConnection.getPrice() < price) {
+                price = flightsWithConnection.getPrice();
             }
         }
         return price;
     }
 
-    public static String getShortestBigFlight(List<FlightsWithConnections> flightList) {
-        FlightsWithConnections cheapestBigFlight = new FlightsWithConnections();
+    public static String getShortestBigFlight(List<FlightWithConnection> flightList) {
+        FlightWithConnection cheapestBigFlight = new FlightWithConnection();
         Double distance = Double.parseDouble(flightList.get(0).getFlightDistance());
-        for (FlightsWithConnections flightsWithConnections: flightList){
-            double flightDouble = Double.parseDouble(flightsWithConnections.getFlightDistance());
+        for (FlightWithConnection flightsWithConnection : flightList){
+            double flightDouble = Double.parseDouble(flightsWithConnection.getFlightDistance());
             if (flightDouble > distance) {
                 distance = flightDouble;
             }

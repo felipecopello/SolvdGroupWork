@@ -1,6 +1,6 @@
 package com.solvd.flightfinder;
 
-import com.solvd.flightfinder.entities.utils.GeoDistanceCalculator;
+import com.solvd.flightfinder.utils.GeoDistanceCalculator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
