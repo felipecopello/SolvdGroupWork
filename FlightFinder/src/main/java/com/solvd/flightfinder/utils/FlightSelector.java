@@ -16,11 +16,11 @@ import com.solvd.flightfinder.interfaces.FlightMapper;
 public class FlightSelector {
 	private static final Logger LOGGER = LogManager.getLogger(MyBatisTrialRunner.class);
 
-	public static void flightOptions(long departureAirportId, long arrivalAirportId) {
+	public static void flightOptions(String departureAirportId, String arrivalAirportId) {
 		FlightMapper flightMapper = (FlightMapper) MyBatisFactory.getMyBatis("flight");
 
-		List<Flight> flightsByDepartureId = flightMapper.getByDepartureAirportId(departureAirportId);
-		List<Flight> flightsByArrivalId = flightMapper.getByArrivalAirportId(arrivalAirportId);
+		List<Flight> flightsByDepartureId = flightMapper.getByDepartureAirportId(Long.parseLong(departureAirportId));
+		List<Flight> flightsByArrivalId = flightMapper.getByArrivalAirportId(Long.parseLong(arrivalAirportId));
 
 		List<Flight> directFlights = getDirectFlights(flightsByDepartureId, arrivalAirportId);
 
@@ -36,7 +36,7 @@ public class FlightSelector {
 		flightsCombinations.forEach(f -> LOGGER.info(f));
 	}
 
-	public static List<Flight> getDirectFlights(List<Flight> flightsByDepartureId, long arrivalAirportId) {
+	public static List<Flight> getDirectFlights(List<Flight> flightsByDepartureId, String arrivalAirportId) {
 		Predicate<Flight> arrivesTo = f -> f.getArrivalAirport().getAirportId() == arrivalAirportId;
 
 		List<Flight> directFlights = flightsByDepartureId.stream().filter(arrivesTo).collect(Collectors.toList());
@@ -48,7 +48,7 @@ public class FlightSelector {
 	// departure airport Id, the lists of flights brought from de db with de arival
 	// airport Id, and the arrival airport Id.
 	public static List<FlightWithConnection> compareFlights(List<Flight> flightsByDepartureId,
-			List<Flight> flightsByArrivalId, long arrivalAirportId) {
+			List<Flight> flightsByArrivalId, String arrivalAirportId) {
 		List<FlightWithConnection> flightsCombinations = new LinkedList<>();
 		for (int i = 0; i < flightsByDepartureId.size(); i++) {
 			List<Flight> matchedFlights = comparingFlights(
@@ -56,7 +56,7 @@ public class FlightSelector {
 					flightsByArrivalId);
 			if (!matchedFlights.isEmpty()) {
 				Flight flight = flightsByDepartureId.get(i);
-				matchedFlights.forEach(f -> flightsCombinations.add(new FlightWithConnection(flight, f)));
+				matchedFlights.forEach(f -> flightsCombinations.add(new FlightWithConnection()));
 			}
 		}
 		return flightsCombinations;
@@ -64,7 +64,7 @@ public class FlightSelector {
 
 	// Function that return the flights that arrive to our destination, and depart
 	// from the previous flight destination
-	public static List<Flight> comparingFlights(long departureAirportId, long arrivalAirportId,
+	public static List<Flight> comparingFlights(String departureAirportId, String arrivalAirportId,
 			List<Flight> flightsByArrivalId) {
 
 		Predicate<Flight> departsFrom = f -> f.getDepartureAirport().getAirportId() == departureAirportId;

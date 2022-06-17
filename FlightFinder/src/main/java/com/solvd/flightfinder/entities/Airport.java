@@ -1,16 +1,24 @@
 package com.solvd.flightfinder.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Airport {
-	private long airportId;
+	private String airportId;
 	private String name;
 	private float latitude;
 	private float longitude;
 	private City cityLocation;
+	public List<Flight> flights = new ArrayList<Flight>();
 
 	public Airport() {
 	}
 
-	public Airport(long id, String name, float latitude, float longitude, City cityLocation) {
+	public Airport(String id) {
+		this.airportId = id;
+	}
+
+	public Airport(String id, String name, float latitude, float longitude, City cityLocation) {
 		this.airportId = id;
 		this.name = name;
 		this.latitude = latitude;
@@ -18,11 +26,11 @@ public class Airport {
 		this.cityLocation = cityLocation;
 	}
 
-	public long getAirportId() {
+	public String getAirportId() {
 		return airportId;
 	}
 
-	public void setAirportId(long id) {
+	public void setAirportId(String id) {
 		this.airportId = id;
 	}
 
@@ -60,8 +68,8 @@ public class Airport {
 
 	@Override
 	public String toString() {
-		return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude=" + longitude
-				+ ", cityLocation=" + cityLocation + "]";
+		return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude="
+				+ longitude + ", cityLocation=" + cityLocation + "]";
 	}
 
 }

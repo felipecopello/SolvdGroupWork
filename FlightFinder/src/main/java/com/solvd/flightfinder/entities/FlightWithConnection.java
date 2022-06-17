@@ -1,40 +1,22 @@
 package com.solvd.flightfinder.entities;
 
+import java.util.List;
+
 public class FlightWithConnection {
-	private Flight firstFlight;
-	private Flight secondFlight;
+	private List<Flight> flights;
 	private String flightDistance;
 	private int price;
 
 	public FlightWithConnection() {
 	}
 
-	public FlightWithConnection(Flight firstFlight, Flight secondFlight) {
-		this.firstFlight = firstFlight;
-		this.secondFlight = secondFlight;
+	public FlightWithConnection(List<Flight> flights) {
 	}
 
-	public FlightWithConnection(Flight firstFlight, Flight secondFlight, String flightDistance, int price) {
-		this.firstFlight = firstFlight;
-		this.secondFlight = secondFlight;
+	public FlightWithConnection(List<Flight> flights, String flightDistance, int price) {
+
 		this.flightDistance = flightDistance;
 		this.price = price;
-	}
-
-	public Flight getFirstFlight() {
-		return firstFlight;
-	}
-
-	public void setFirstFlight(Flight firstFlight) {
-		this.firstFlight = firstFlight;
-	}
-
-	public Flight getSecondFlight() {
-		return secondFlight;
-	}
-
-	public void setSecondFlight(Flight secondFlight) {
-		this.secondFlight = secondFlight;
 	}
 
 	public String getFlightDistance() {
@@ -53,9 +35,18 @@ public class FlightWithConnection {
 		this.price = price;
 	}
 
+	public List<Flight> getFlights() {
+		return flights;
+	}
+
+	public void setFlights(List<Flight> flights) {
+		this.flights = flights;
+	}
+
 	@Override
 	public String toString() {
-		return "FlightWithConnection [firstFlight=" + firstFlight + ", secondFlight=" + secondFlight
-				+ ", flightDistance=" + flightDistance + ", price=" + price + "]";
+		return "FlightWithConnection [flights=" + flights + ", flightDistance=" + flightDistance + ", price=" + price
+				+ "]";
 	}
+
 }
