@@ -11,8 +11,7 @@ public class Flight {
 	public Flight() {
 	}
 
-	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDistance, int price,
-				  Airline airline) {
+	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDistance, int price, Airline airline) {
 		this.flightId = flightId;
 		this.departureAirport = departureAirport;
 		this.arrivalAirport = arrivalAirport;
