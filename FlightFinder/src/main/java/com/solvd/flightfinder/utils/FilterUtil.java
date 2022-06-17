@@ -2,14 +2,15 @@ package com.solvd.flightfinder.utils;
 
 import com.solvd.flightfinder.entities.Airport;
 import com.solvd.flightfinder.entities.Flight;
+import com.solvd.flightfinder.entities.FlightsWithConnections;
 
 import java.util.List;
 
 public class FilterUtil {
 
     //gets the total of price and distance from a flights list
-    public static Flight joinFlights(List<Flight> flightList) {
-        Flight bigFlight = new Flight();
+    public static FlightsWithConnections joinFlights(List<Flight> flightList) {
+        FlightsWithConnections flightsWithConnections = new FlightsWithConnections();
         int price = 0;
         double distance = 0;
         for (Flight flight: flightList){
@@ -19,27 +20,27 @@ public class FilterUtil {
             distance = distance + GeoDistanceCalculator.distance(departure.getLatitude(), departure.getLongitude(), arrival.getLatitude(), arrival.getLongitude());
         }
         String distanceString = String.valueOf(distance);
-        bigFlight.setPrice(price);
-        bigFlight.setFlightDistance(distanceString);
-        return bigFlight;
+        flightsWithConnections.setPrice(price);
+        flightsWithConnections.setFlightDistance(distanceString);
+        return flightsWithConnections;
     }
 
-    public static int getCheapestBigFlight(List<Flight> flightList) {
-        Flight cheapestBigFlight = new Flight();
+    public static int getCheapestBigFlight(List<FlightsWithConnections> flightList) {
+        FlightsWithConnections cheapestBigFlight = new FlightsWithConnections();
         int price = flightList.get(0).getPrice();
-        for (Flight flight: flightList){
-            if (flight.getPrice() < price) {
-                price = flight.getPrice();
+        for (FlightsWithConnections flightsWithConnections: flightList){
+            if (flightsWithConnections.getPrice() < price) {
+                price = flightsWithConnections.getPrice();
             }
         }
         return price;
     }
 
-    public static String getShortestBigFlight(List<Flight> flightList) {
-        Flight cheapestBigFlight = new Flight();
+    public static String getShortestBigFlight(List<FlightsWithConnections> flightList) {
+        FlightsWithConnections cheapestBigFlight = new FlightsWithConnections();
         Double distance = Double.parseDouble(flightList.get(0).getFlightDistance());
-        for (Flight flight: flightList){
-            double flightDouble = Double.parseDouble(flight.getFlightDistance());
+        for (FlightsWithConnections flightsWithConnections: flightList){
+            double flightDouble = Double.parseDouble(flightsWithConnections.getFlightDistance());
             if (flightDouble > distance) {
                 distance = flightDouble;
             }
