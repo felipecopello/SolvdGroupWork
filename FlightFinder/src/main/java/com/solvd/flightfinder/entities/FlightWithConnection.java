@@ -19,6 +19,10 @@ public class FlightWithConnection {
 		this.price = price;
 	}
 
+	public FlightWithConnection(Flight flight, Flight f) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getFlightDistance() {
 		return flightDistance;
 	}
