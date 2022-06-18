@@ -4,7 +4,9 @@ public class Flight {
 	private long flightId;
 	private Airport departureAirport;
 	private Airport arrivalAirport;
+
 	private String flightDistance;
+
 	private int price;
 	private Airline airline;
 
@@ -70,7 +72,8 @@ public class Flight {
 	@Override
 	public String toString() {
 		return "Flight [flightId=" + flightId + ", departureAirport=" + departureAirport + ", arrivalAirport="
-				+ arrivalAirport + ", flightDuration=" + flightDistance + ", price=" + price + ", airline=" + airline
+				+ arrivalAirport + ", flightDistance=" + flightDistance + ", price=" + price + ", airline=" + airline
 				+ "]";
 	}
+
 }

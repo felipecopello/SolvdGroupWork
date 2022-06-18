@@ -1,4 +1,4 @@
-package util;
+package com.solvd.flightfinder.utils;
 
 import java.io.IOException;
 import java.io.Reader;

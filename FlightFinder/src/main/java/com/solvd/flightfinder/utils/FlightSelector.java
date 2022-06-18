@@ -57,6 +57,7 @@ public class FlightSelector {
 			if (!matchedFlights.isEmpty()) {
 				Flight flight = flightsByDepartureId.get(i);
 				matchedFlights.forEach(f -> flightsCombinations.add(new FlightWithConnection(flight, f)));
+
 			}
 		}
 		return flightsCombinations;
