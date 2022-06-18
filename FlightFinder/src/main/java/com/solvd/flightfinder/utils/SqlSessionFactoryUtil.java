@@ -1,4 +1,4 @@
-package util;
+package com.solvd.flightfinder.utils;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -41,5 +41,4 @@ public class SqlSessionFactoryUtil {
     public static void setReader(Reader reader) {
         SqlSessionFactoryUtil.reader = reader;
     }
-
 }

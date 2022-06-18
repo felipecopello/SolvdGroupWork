@@ -1,27 +1,40 @@
 package com.solvd.flightfinder.entities;
 
 public class Passenger {
-    private int passengerId;
+    private long id;
     private String name;
     private int age;
-    private Airport origin;
-    private Airport destination;
+    private long origin;
+    private long destination;
 
     public Passenger() {
     }
 
-    public Passenger(int passengerId, String name, int age) {
-        this.passengerId = passengerId;
+    public Passenger(long id, String name, int age) {
+        this.id = id;
         this.name = name;
         this.age = age;
     }
 
-    public int getPassengerId() {
-        return passengerId;
+    public Passenger(long id, String name, int age, long origin, long destination) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.origin = origin;
+        this.destination = destination;
     }
 
-    public void setPassengerId(int passengerId) {
-        this.passengerId = passengerId;
+    public Passenger(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public long getPassengerId() {
+        return id;
+    }
+
+    public void setPassengerId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -40,25 +53,25 @@ public class Passenger {
         this.age = age;
     }
 
-    public Airport getOrigin() {
+    public long getOrigin() {
         return origin;
     }
 
-    public void setOrigin(Airport origin) {
+    public void setOrigin(long origin) {
         this.origin = origin;
     }
 
-    public Airport getDestination() {
+    public long getDestination() {
         return destination;
     }
 
-    public void setDestination(Airport destination) {
+    public void setDestination(long destination) {
         this.destination = destination;
     }
 
     @Override
     public String toString() {
-        return "Passenger [ passengerId=" + passengerId + ", name='" + name + ", age=" + age + ", origin=" + origin +
+        return "Passenger [ passengerId=" + id + ", name='" + name + ", age=" + age + ", origin=" + origin +
                 ", destination=" + destination + ']';
     }
 }

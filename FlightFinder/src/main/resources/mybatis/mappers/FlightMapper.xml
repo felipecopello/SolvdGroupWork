@@ -3,21 +3,32 @@
 <mapper namespace="com.solvd.flightfinder.interfaces.FlightMapper">
     <resultMap id="FlightResultMap" type="com.solvd.flightfinder.entities.Flight" autoMapping="false">
         <result column="id" property="flightId"/>
-        <result column="id" property="price"/>
-        <result column="id" property="flightId"/>
+        <result column="price_in_usd" property="price"/>
         <association property="departureAirport" column="departure_airport_id"
                      javaType="com.solvd.flightfinder.entities.Airport"
-                     select="com.solvd.flightfinder.interfaces.Airport.getById"/>
+                     select="com.solvd.flightfinder.interfaces.AirportMapper.getById"/>
         <association property="arrivalAirport" column="arrival_airport_id"
                      javaType="com.solvd.flightfinder.entities.Airport"
-                     select="com.solvd.flightfinder.interfaces.Airport.getById"/>
+                     select="com.solvd.flightfinder.interfaces.AirportMapper.getById"/>
         <association property="airline" column="airline_id" javaType="com.solvd.flightfinder.entities.Airline"
-                     select="com.solvd.flightfinder.interfaces.Airline.getById"/>
+                     select="com.solvd.flightfinder.interfaces.AirlineMapper.getById"/>
     </resultMap>
     <select id="getById" parameterType="Long" resultMap="FlightResultMap">
         Select *
         from Flights
         where id = #{flightId}
+    </select>
+
+    <select id="getByDepartureAirportId" parameterType="Long" resultMap="FlightResultMap">
+        Select *
+        from Flights
+        where departure_airport_id = #{departureAirportId}
+    </select>
+
+    <select id="getByArrivalAirportId" parameterType="Long" resultMap="FlightResultMap">
+        Select *
+        from Flights
+        where arrival_airport_id = #{arrivalAirportId}
     </select>
 
     <select id="getAll" resultMap="FlightResultMap">

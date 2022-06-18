@@ -11,7 +11,7 @@ public class Country {
         this.name = name;
     }
 
-    public float getCountryId() {
+    public long getCountryId() {
         return countryId;
     }
 

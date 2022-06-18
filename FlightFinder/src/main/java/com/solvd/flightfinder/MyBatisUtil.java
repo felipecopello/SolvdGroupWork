@@ -2,11 +2,11 @@ package com.solvd.flightfinder;
 
 import com.solvd.flightfinder.entities.City;
 import com.solvd.flightfinder.interfaces.*;
+import com.solvd.flightfinder.utils.SqlSessionFactoryUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import util.SqlSessionFactoryUtil;
 
 import java.util.List;
 

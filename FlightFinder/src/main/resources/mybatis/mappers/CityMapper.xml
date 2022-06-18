@@ -17,6 +17,13 @@
         Select *
         from Cities
     </select>
+
+    <select id="getByCountry" parameterType="Long" resultMap="CityResultMap">
+        Select *
+        from Cities
+        where country_id = #{locationCountry}
+    </select>
+
     <delete id="delete">
         Delete
         from Cities

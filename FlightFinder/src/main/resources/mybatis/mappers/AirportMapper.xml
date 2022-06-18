@@ -19,6 +19,13 @@
         Select *
         from Airports
     </select>
+
+    <select id="getByCity" parameterType="Long" resultMap="AirportResultMap" >
+        Select *
+        from Airports
+        where city_id = #{cityLocation}
+    </select>
+
     <delete id="delete">
         Delete
         from Airports
