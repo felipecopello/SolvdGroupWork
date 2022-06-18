@@ -12,8 +12,6 @@ import com.solvd.flightfinder.interfaces.IEntityMapper;
 import com.solvd.flightfinder.interfaces.PassengerMapper;
 import com.solvd.flightfinder.interfaces.TicketMapper;
 
-import util.SqlSessionFactoryUtil;
-
 public class MyBatisFactory {
 
 	private static SqlSessionFactory factory = SqlSessionFactoryUtil.getInstance();
