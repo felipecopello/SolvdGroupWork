@@ -4,7 +4,6 @@ public class Flight {
 	private long flightId;
 	private Airport departureAirport;
 	private Airport arrivalAirport;
-	private String flightDistance;
 	private int price;
 	private Airline airline;
 
@@ -43,14 +42,6 @@ public class Flight {
 		this.arrivalAirport = arrivalAirport;
 	}
 
-	public String getFlightDistance() {
-		return flightDistance;
-	}
-
-	public void setFlightDistance(String flightDuration) {
-		this.flightDistance = flightDuration;
-	}
-
 	public int getPrice() {
 		return price;
 	}
@@ -70,7 +61,7 @@ public class Flight {
 	@Override
 	public String toString() {
 		return "Flight [flightId=" + flightId + ", departureAirport=" + departureAirport + ", arrivalAirport="
-				+ arrivalAirport + ", flightDuration=" + flightDistance + ", price=" + price + ", airline=" + airline
+				+ arrivalAirport + ", price=" + price + ", airline=" + airline
 				+ "]";
 	}
 }
