@@ -20,7 +20,7 @@
         from Airports
     </select>
 
-    <select id="getByCity" parameterType="Long" resultMap="AirportResultMap" >
+    <select id="getByCity" parameterType="Long" resultMap="AirportResultMap">
         Select *
         from Airports
         where city_id = #{cityLocation}

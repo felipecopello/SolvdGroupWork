@@ -7,11 +7,11 @@ import org.apache.logging.log4j.Logger;
 public class Messages {
     private final static Logger LOGGER = LogManager.getLogger(AirportSelection.class);
 
-    public static void welcomeMessage(){
+    public static void welcomeMessage() {
         LOGGER.info("------Welcome to flight finder------");
     }
 
-    public static void logo(){
+    public static void logo() {
         LOGGER.info("""
                     _________       __    __     _______           __        \s
                    / ____/ (_)___ _/ /_  / /_   / ____(_)___  ____/ /__  _____

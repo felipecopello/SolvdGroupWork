@@ -3,7 +3,6 @@ package com.solvd.flightfinder.ui.airportselection;
 import com.solvd.flightfinder.entities.Airport;
 import com.solvd.flightfinder.entities.City;
 import com.solvd.flightfinder.entities.Country;
-import com.solvd.flightfinder.entities.Passenger;
 import com.solvd.flightfinder.interfaces.AirportMapper;
 import com.solvd.flightfinder.interfaces.CityMapper;
 import com.solvd.flightfinder.interfaces.CountryMapper;
@@ -20,14 +19,14 @@ import java.util.Scanner;
 
 public class AirportSelection {
     private final static Logger LOGGER = LogManager.getLogger(AirportSelection.class);
-    Scanner sc = new Scanner(System.in);
     private static SqlSessionFactory factory = SqlSessionFactoryUtil.getInstance();
     private static SqlSession session = factory.openSession();
-    private long country_id;
-    private long city_id;
+    Scanner sc = new Scanner(System.in);
     CountryMapper countryMapper = session.getMapper(CountryMapper.class);
     CityMapper cityMapper = session.getMapper(CityMapper.class);
     AirportMapper airportMapper = session.getMapper(AirportMapper.class);
+    private long country_id;
+    private long city_id;
     private List<Country> countriesList = new ArrayList<>();
     private List<City> citiesList = new ArrayList<>();
     private List<Airport> airportsList = new ArrayList<>();
@@ -42,7 +41,7 @@ public class AirportSelection {
         city_id = sc.nextLong();
         airportsList = airportMapper.getByCity(city_id);
         PrintAirportFromBD();
-        return(sc.nextLong());
+        return (sc.nextLong());
     }
 
     private void PrintCountryFromDB() throws SQLException {
@@ -53,7 +52,7 @@ public class AirportSelection {
         citiesList.stream().forEach(city -> LOGGER.info((int) city.getCityId() + " - " + city.getName() + "."));
     }
 
-    private  void PrintAirportFromBD() throws SQLException{
+    private void PrintAirportFromBD() throws SQLException {
         airportsList.stream().forEach(airport -> LOGGER.info((int) airport.getAirportId() + " - " + airport.getName() + "."));
     }
 }

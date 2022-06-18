@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.SQLException;
 
+
 public class Runner {
     private static final Logger LOGGER = LogManager.getLogger(Runner.class);
 

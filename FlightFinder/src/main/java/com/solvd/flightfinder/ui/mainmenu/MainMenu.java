@@ -2,7 +2,6 @@ package com.solvd.flightfinder.ui.mainmenu;
 
 import com.solvd.flightfinder.entities.Passenger;
 import com.solvd.flightfinder.ui.AbstractMenuEnum;
-import com.solvd.flightfinder.ui.airportselection.AirportSelection;
 import com.solvd.flightfinder.ui.finalmenu.FinalMenu;
 import com.solvd.flightfinder.ui.travelmenu.TravelMenu;
 import org.apache.logging.log4j.LogManager;
