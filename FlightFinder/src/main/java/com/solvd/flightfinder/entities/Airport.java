@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Airport {
-	private String airportId;
+	private long airportId;
 	private String name;
 	private float latitude;
 	private float longitude;
@@ -14,11 +14,11 @@ public class Airport {
 	public Airport() {
 	}
 
-	public Airport(String id) {
+	public Airport(long id) {
 		this.airportId = id;
 	}
 
-	public Airport(String id, String name, float latitude, float longitude, City cityLocation) {
+	public Airport(long id, String name, float latitude, float longitude, City cityLocation) {
 		this.airportId = id;
 		this.name = name;
 		this.latitude = latitude;
@@ -26,11 +26,11 @@ public class Airport {
 		this.cityLocation = cityLocation;
 	}
 
-	public String getAirportId() {
+	public long getAirportId() {
 		return airportId;
 	}
 
-	public void setAirportId(String id) {
+	public void setAirportId(long id) {
 		this.airportId = id;
 	}
 
@@ -70,6 +70,14 @@ public class Airport {
 	public String toString() {
 		return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude="
 				+ longitude + ", cityLocation=" + cityLocation + "]";
+	}
+
+	public List<Flight> getFlights() {
+		return flights;
+	}
+
+	public void setFlights(List<Flight> flights) {
+		this.flights = flights;
 	}
 
 }
