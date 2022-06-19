@@ -1,14 +1,19 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Ticket {
+	@JsonProperty
 	private int ticketId;
-	private Flight flight;
+	@JsonProperty
+	private FlightWithConnection flight;
+	@JsonProperty
 	private Passenger passenger;
 
 	public Ticket() {
 	}
 
-	public Ticket(int ticketId, Flight flight, Passenger passenger) {
+	public Ticket(int ticketId, FlightWithConnection flight, Passenger passenger) {
 		this.ticketId = ticketId;
 		this.flight = flight;
 		this.passenger = passenger;
@@ -22,11 +27,11 @@ public class Ticket {
 		this.ticketId = ticketId;
 	}
 
-	public Flight getFlight() {
+	public FlightWithConnection getFlight() {
 		return flight;
 	}
 
-	public void setFlight(Flight flight) {
+	public void setFlight(FlightWithConnection flight) {
 		this.flight = flight;
 	}
 
