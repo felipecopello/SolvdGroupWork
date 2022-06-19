@@ -1,23 +1,33 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Flight {
-    private long flightId;
-    private Airport departureAirport;
-    private Airport arrivalAirport;
-    private String flightDistance;
-    private int price;
-    private Airline airline;
+	@JsonProperty
+	private long flightId;
+	@JsonProperty
+	private Airport departureAirport;
+	@JsonProperty
+	private Airport arrivalAirport;
+	@JsonProperty
+	private int price;
+	@JsonProperty
+	private Airline airline;
+    private String flightDuration;
+    private int airlineId;
 
     public Flight() {
     }
 
-    public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, int price, Airline airline) {
-        this.flightId = flightId;
-        this.departureAirport = departureAirport;
-        this.arrivalAirport = arrivalAirport;
-        this.price = price;
-        this.airline = airline;
-    }
+	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDuration, int price,
+			int airlineId) {
+		this.flightId = flightId;
+		this.departureAirport = departureAirport;
+		this.arrivalAirport = arrivalAirport;
+		this.flightDuration = flightDuration;
+		this.price = price;
+		this.airlineId = airlineId;
+	}
 
     public long getFlightId() {
         return flightId;
@@ -43,14 +53,13 @@ public class Flight {
         this.arrivalAirport = arrivalAirport;
     }
 
+	public String getFlightDuration() {
+		return flightDuration;
+	}
 
-    public String getFlightDistance() {
-        return flightDistance;
-    }
-
-    public void setFlightDistance(String flightDuration) {
-        this.flightDistance = flightDuration;
-    }
+	public void setFlightDuration(String flightDuration) {
+		this.flightDuration = flightDuration;
+	}
 
     public int getPrice() {
         return price;
@@ -71,7 +80,7 @@ public class Flight {
     @Override
     public String toString() {
         return "Flight [flightId=" + flightId + ", departureAirport=" + departureAirport + ", arrivalAirport="
-                + arrivalAirport + ", flightDuration=" + flightDistance + ", price=" + price + ", airline=" + airline
+                + arrivalAirport + ", price=" + price + ", airline=" + airline
                 + "]";
     }
 }

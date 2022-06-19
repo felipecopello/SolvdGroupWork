@@ -1,13 +1,18 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class FlightWithConnection {
-    private Flight departureFlight;
-    private Flight arrivalFlight;
-    //	private List<Flight> flights;
-    private String flightDistance;
-    private int price;
+	@JsonProperty
+	private Flight departureFlight;
+	@JsonProperty
+	private Flight arrivalFlight;
+	@JsonProperty
+	private String flightDistance;
+	@JsonProperty
+	private int price;
 
     public FlightWithConnection() {
     }
@@ -41,14 +46,6 @@ public class FlightWithConnection {
     public void setPrice(int price) {
         this.price = price;
     }
-
-//	public List<Flight> getFlights() {
-//		return flights;
-//	}
-//
-//	public void setFlights(List<Flight> flights) {
-//		this.flights = flights;
-//	}
 
     public Flight getArrivalFlight() {
         return arrivalFlight;

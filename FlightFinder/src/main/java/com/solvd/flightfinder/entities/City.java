@@ -1,9 +1,14 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class City {
-    private long cityId;
-    private String name;
-    private Country locationCountry;
+	@JsonProperty
+	private long cityId;
+	@JsonProperty
+	private String name;
+	@JsonProperty
+	private Country locationCountry;
 
     public City() {
     }

@@ -1,15 +1,22 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Airport {
-    public List<Flight> flights = new ArrayList<Flight>();
-    private long airportId;
-    private String name;
-    private float latitude;
-    private float longitude;
-    private City cityLocation;
+	@JsonProperty
+	private long airportId;
+	@JsonProperty
+	private String name;
+	@JsonProperty
+	private float latitude;
+	@JsonProperty
+	private float longitude;
+	@JsonProperty
+	private City cityLocation;
+	public List<Flight> flights = new ArrayList<Flight>();
 
     public Airport() {
     }
