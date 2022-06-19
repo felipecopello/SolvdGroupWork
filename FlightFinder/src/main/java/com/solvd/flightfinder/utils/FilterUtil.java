@@ -13,7 +13,7 @@ public class FilterUtil {
         FlightWithConnection flightsWithConnection = new FlightWithConnection();
         int price = 0;
         double distance = 0;
-        for (Flight flight: flightList){
+        for (Flight flight : flightList) {
             price = price + flight.getPrice();
             Airport departure = flight.getDepartureAirport();
             Airport arrival = flight.getArrivalAirport();
@@ -28,7 +28,7 @@ public class FilterUtil {
     public static int getCheapestBigFlight(List<FlightWithConnection> flightList) {
         FlightWithConnection cheapestBigFlight = new FlightWithConnection();
         int price = flightList.get(0).getPrice();
-        for (FlightWithConnection flightsWithConnection : flightList){
+        for (FlightWithConnection flightsWithConnection : flightList) {
             if (flightsWithConnection.getPrice() < price) {
                 price = flightsWithConnection.getPrice();
             }
@@ -39,7 +39,7 @@ public class FilterUtil {
     public static String getShortestBigFlight(List<FlightWithConnection> flightList) {
         FlightWithConnection cheapestBigFlight = new FlightWithConnection();
         Double distance = Double.parseDouble(flightList.get(0).getFlightDistance());
-        for (FlightWithConnection flightsWithConnection : flightList){
+        for (FlightWithConnection flightsWithConnection : flightList) {
             double flightDouble = Double.parseDouble(flightsWithConnection.getFlightDistance());
             if (flightDouble > distance) {
                 distance = flightDouble;

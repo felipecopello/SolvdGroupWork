@@ -4,18 +4,6 @@ import com.solvd.flightfinder.interfaces.*;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-<<<<<<< HEAD
-=======
-import com.solvd.flightfinder.interfaces.AirlineMapper;
-import com.solvd.flightfinder.interfaces.AirportMapper;
-import com.solvd.flightfinder.interfaces.CityMapper;
-import com.solvd.flightfinder.interfaces.CountryMapper;
-import com.solvd.flightfinder.interfaces.FlightMapper;
-import com.solvd.flightfinder.interfaces.IEntityMapper;
-import com.solvd.flightfinder.interfaces.PassengerMapper;
-import com.solvd.flightfinder.interfaces.TicketMapper;
-
->>>>>>> 550556fa9c491cdd1a09f3d795812bb32adf035f
 
 public class MyBatisFactory {
 

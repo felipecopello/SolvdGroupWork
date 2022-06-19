@@ -4,28 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Airport {
+    public List<Flight> flights = new ArrayList<Flight>();
     private long airportId;
     private String name;
     private float latitude;
     private float longitude;
     private City cityLocation;
-	public List<Flight> flights = new ArrayList<Flight>();
 
     public Airport() {
     }
 
 
-	public Airport(long id) {
-		this.airportId = id;
-	}
+    public Airport(long id) {
+        this.airportId = id;
+    }
 
-	public Airport(long id, String name, float latitude, float longitude, City cityLocation) {
-		this.airportId = id;
-		this.name = name;
-		this.latitude = latitude;
-		this.longitude = longitude;
-		this.cityLocation = cityLocation;
-	}
+    public Airport(long id, String name, float latitude, float longitude, City cityLocation) {
+        this.airportId = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.cityLocation = cityLocation;
+    }
+
     public long getAirportId() {
         return airportId;
     }
@@ -66,18 +67,18 @@ public class Airport {
         this.cityLocation = cityLocation;
     }
 
-	@Override
-	public String toString() {
-		return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude="
-				+ longitude + ", cityLocation=" + cityLocation + "]";
-	}
+    @Override
+    public String toString() {
+        return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude="
+                + longitude + ", cityLocation=" + cityLocation + "]";
+    }
 
-	public List<Flight> getFlights() {
-		return flights;
-	}
+    public List<Flight> getFlights() {
+        return flights;
+    }
 
-	public void setFlights(List<Flight> flights) {
-		this.flights = flights;
-	}
+    public void setFlights(List<Flight> flights) {
+        this.flights = flights;
+    }
 
 }
