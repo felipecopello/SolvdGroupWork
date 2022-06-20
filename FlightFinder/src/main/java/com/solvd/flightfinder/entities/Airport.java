@@ -1,24 +1,31 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Airport {
-	private String airportId;
+	@JsonProperty
+	private long airportId;
+	@JsonProperty
 	private String name;
+	@JsonProperty
 	private float latitude;
+	@JsonProperty
 	private float longitude;
+	@JsonProperty
 	private City cityLocation;
 	public List<Flight> flights = new ArrayList<Flight>();
 
 	public Airport() {
 	}
 
-	public Airport(String id) {
+	public Airport(long id) {
 		this.airportId = id;
 	}
 
-	public Airport(String id, String name, float latitude, float longitude, City cityLocation) {
+	public Airport(long id, String name, float latitude, float longitude, City cityLocation) {
 		this.airportId = id;
 		this.name = name;
 		this.latitude = latitude;
@@ -26,11 +33,11 @@ public class Airport {
 		this.cityLocation = cityLocation;
 	}
 
-	public String getAirportId() {
+	public long getAirportId() {
 		return airportId;
 	}
 
-	public void setAirportId(String id) {
+	public void setAirportId(long id) {
 		this.airportId = id;
 	}
 
@@ -70,6 +77,14 @@ public class Airport {
 	public String toString() {
 		return "Airport [airportId=" + airportId + ", name=" + name + ", latitude=" + latitude + ", longitude="
 				+ longitude + ", cityLocation=" + cityLocation + "]";
+	}
+
+	public List<Flight> getFlights() {
+		return flights;
+	}
+
+	public void setFlights(List<Flight> flights) {
+		this.flights = flights;
 	}
 
 }

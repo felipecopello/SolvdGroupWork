@@ -1,13 +1,20 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Flight {
+	@JsonProperty
 	private long flightId;
+	@JsonProperty
 	private Airport departureAirport;
+	@JsonProperty
 	private Airport arrivalAirport;
 
 	private String flightDistance;
 
+	@JsonProperty
 	private int price;
+	@JsonProperty
 	private Airline airline;
 
 	public Flight() {

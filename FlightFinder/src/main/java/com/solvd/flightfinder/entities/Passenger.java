@@ -1,8 +1,13 @@
 package com.solvd.flightfinder.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Passenger {
+	@JsonProperty
 	private int passengerId;
+	@JsonProperty
 	private String name;
+	@JsonProperty
 	private int age;
 
 	public Passenger() {
