@@ -1,184 +1,31 @@
-2022-06-20 01:17:48,219 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection -     _________       __    __     _______           __         
+2022-06-20 08:20:09,091 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection -     _________       __    __     _______           __         
    / ____/ (_)___ _/ /_  / /_   / ____(_)___  ____/ /__  _____
   / /_  / / / __ `/ __ \/ __/  / /_  / / __ \/ __  / _ \/ ___/
  / __/ / / / /_/ / / / / /_   / __/ / / / / / /_/ /  __/ /    
 /_/   /_/_/\__, /_/ /_/\__/  /_/   /_/_/ /_/\__,_/\___/_/     
           /____/                                              
 
-2022-06-20 01:17:48,221 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - ------Welcome to flight finder------
-2022-06-20 01:17:48,275 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
-2022-06-20 01:17:48,280 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2022-06-20 01:17:48,280 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2022-06-20 01:17:48,280 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2022-06-20 01:17:48,280 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2022-06-20 01:17:48,340 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Login.
-2022-06-20 01:17:48,340 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Create an account.
-2022-06-20 01:17:48,340 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Exit.
-2022-06-20 01:17:52,415 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 0
-2022-06-20 01:17:52,421 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2022-06-20 01:17:55,756 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2075372030.
-2022-06-20 01:17:55,756 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7bb3a9fe]
-2022-06-20 01:17:56,078 [main] DEBUG com.solvd.flightfinder.interfaces.PassengerMapper.getById - ==>  Preparing: Select * from Passengers where id = ?
-2022-06-20 01:17:56,099 [main] DEBUG com.solvd.flightfinder.interfaces.PassengerMapper.getById - ==> Parameters: 2(Long)
-2022-06-20 01:17:56,379 [main] DEBUG com.solvd.flightfinder.interfaces.PassengerMapper.getById - <==      Total: 1
-2022-06-20 01:17:56,380 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Check flights..
-2022-06-20 01:17:56,380 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Purchase flight..
-2022-06-20 01:17:56,381 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Exit.
-2022-06-20 01:17:58,176 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 0
-2022-06-20 01:17:58,180 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Set Origin..
-2022-06-20 01:17:58,180 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Set Destination..
-2022-06-20 01:17:58,180 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Go to the Main Menu..
-2022-06-20 01:17:58,180 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 3- Exit.
-2022-06-20 01:18:00,004 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 0
-2022-06-20 01:18:00,005 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2022-06-20 01:18:03,567 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 973604791.
-2022-06-20 01:18:03,568 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a0807b7]
-2022-06-20 01:18:03,997 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getAll - ==>  Preparing: Select * from Countries
-2022-06-20 01:18:03,999 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getAll - ==> Parameters: 
-2022-06-20 01:18:04,311 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getAll - <==      Total: 4
-2022-06-20 01:18:04,312 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 1 - Argentina.
-2022-06-20 01:18:04,312 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 2 - Japan.
-2022-06-20 01:18:04,312 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 3 - Belarus.
-2022-06-20 01:18:04,312 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 4 - Australia.
-2022-06-20 01:18:06,103 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getByCountry - ==>  Preparing: Select * from Cities where country_id = ?
-2022-06-20 01:18:06,104 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getByCountry - ==> Parameters: 4(Long)
-2022-06-20 01:18:06,401 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ====>  Preparing: Select * from Countries where id = ?
-2022-06-20 01:18:06,401 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ====> Parameters: 4(Long)
-2022-06-20 01:18:06,756 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - <====      Total: 1
-2022-06-20 01:18:06,757 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getByCountry - <==      Total: 2
-2022-06-20 01:18:06,758 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 5 - Perth.
-2022-06-20 01:18:06,758 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 6 - Sidney.
-2022-06-20 01:18:08,489 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getByCity - ==>  Preparing: Select * from Airports where city_id = ?
-2022-06-20 01:18:08,490 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getByCity - ==> Parameters: 6(Long)
-2022-06-20 01:18:09,145 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ====>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:09,145 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ====> Parameters: 6(Long)
-2022-06-20 01:18:09,508 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <====      Total: 1
-2022-06-20 01:18:09,509 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getByCity - <==      Total: 1
-2022-06-20 01:18:09,510 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 6 - Sidney-Richland Airport.
-2022-06-20 01:18:10,742 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Set Origin..
-2022-06-20 01:18:10,742 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Set Destination..
-2022-06-20 01:18:10,743 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Go to the Main Menu..
-2022-06-20 01:18:10,743 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 3- Exit.
-2022-06-20 01:18:12,796 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 1
-2022-06-20 01:18:12,797 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 1 - Argentina.
-2022-06-20 01:18:12,797 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 2 - Japan.
-2022-06-20 01:18:12,797 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 3 - Belarus.
-2022-06-20 01:18:12,797 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 4 - Australia.
-2022-06-20 01:18:16,275 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getByCountry - ==>  Preparing: Select * from Cities where country_id = ?
-2022-06-20 01:18:16,276 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getByCountry - ==> Parameters: 3(Long)
-2022-06-20 01:18:16,534 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ====>  Preparing: Select * from Countries where id = ?
-2022-06-20 01:18:16,535 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ====> Parameters: 3(Long)
-2022-06-20 01:18:16,814 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - <====      Total: 1
-2022-06-20 01:18:16,814 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getByCountry - <==      Total: 1
-2022-06-20 01:18:16,814 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 4 - Minsk.
-2022-06-20 01:18:18,564 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getByCity - ==>  Preparing: Select * from Airports where city_id = ?
-2022-06-20 01:18:18,565 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getByCity - ==> Parameters: 4(Long)
-2022-06-20 01:18:18,831 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ====>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:18,832 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ====> Parameters: 4(Long)
-2022-06-20 01:18:19,279 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <====      Total: 1
-2022-06-20 01:18:19,280 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getByCity - <==      Total: 1
-2022-06-20 01:18:19,280 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - 4 - Minsk International.
-2022-06-20 01:18:21,346 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Set Origin..
-2022-06-20 01:18:21,347 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Set Destination..
-2022-06-20 01:18:21,347 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Go to the Main Menu..
-2022-06-20 01:18:21,347 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 3- Exit.
-2022-06-20 01:18:22,438 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 2
-2022-06-20 01:18:22,438 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Check flights..
-2022-06-20 01:18:22,438 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Purchase flight..
-2022-06-20 01:18:22,439 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Exit.
-2022-06-20 01:18:23,628 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 1
-2022-06-20 01:18:23,631 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2022-06-20 01:18:27,425 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2047744862.
-2022-06-20 01:18:27,425 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7a0e1b5e]
-2022-06-20 01:18:27,800 [main] DEBUG com.solvd.flightfinder.interfaces.FlightMapper.getByDepartureAirportId - ==>  Preparing: Select * from Flights where departure_airport_id = ?
-2022-06-20 01:18:27,808 [main] DEBUG com.solvd.flightfinder.interfaces.FlightMapper.getByDepartureAirportId - ==> Parameters: 6(Long)
-2022-06-20 01:18:28,165 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====>  Preparing: Select * from Airports where id = ?
-2022-06-20 01:18:28,166 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====> Parameters: 6(Long)
-2022-06-20 01:18:28,848 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:28,849 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======> Parameters: 6(Long)
-2022-06-20 01:18:29,326 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========>  Preparing: Select * from Countries where id = ?
-2022-06-20 01:18:29,327 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========> Parameters: 4(Long)
-2022-06-20 01:18:29,627 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - <========      Total: 1
-2022-06-20 01:18:29,628 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <======      Total: 1
-2022-06-20 01:18:29,628 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - <====      Total: 1
-2022-06-20 01:18:29,629 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====>  Preparing: Select * from Airports where id = ?
-2022-06-20 01:18:29,629 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====> Parameters: 1(Long)
-2022-06-20 01:18:29,903 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:29,904 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======> Parameters: 1(Long)
-2022-06-20 01:18:30,191 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========>  Preparing: Select * from Countries where id = ?
-2022-06-20 01:18:30,192 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========> Parameters: 1(Long)
-2022-06-20 01:18:30,484 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - <========      Total: 1
-2022-06-20 01:18:30,485 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <======      Total: 1
-2022-06-20 01:18:30,485 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - <====      Total: 1
-2022-06-20 01:18:30,486 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:30,487 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 5(Long)
-2022-06-20 01:18:30,773 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:30,773 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====>  Preparing: Select * from Airports where id = ?
-2022-06-20 01:18:30,774 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====> Parameters: 4(Long)
-2022-06-20 01:18:31,149 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:31,150 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======> Parameters: 4(Long)
-2022-06-20 01:18:31,639 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========>  Preparing: Select * from Countries where id = ?
-2022-06-20 01:18:31,640 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========> Parameters: 3(Long)
-2022-06-20 01:18:32,173 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - <========      Total: 1
-2022-06-20 01:18:32,174 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <======      Total: 1
-2022-06-20 01:18:32,174 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - <====      Total: 1
-2022-06-20 01:18:32,174 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:32,174 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 1(Long)
-2022-06-20 01:18:32,543 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:32,547 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:32,548 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 10(Long)
-2022-06-20 01:18:32,821 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:32,825 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====>  Preparing: Select * from Airports where id = ?
-2022-06-20 01:18:32,825 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====> Parameters: 2(Long)
-2022-06-20 01:18:33,106 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:33,108 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======> Parameters: 2(Long)
-2022-06-20 01:18:33,649 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <======      Total: 1
-2022-06-20 01:18:33,650 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - <====      Total: 1
-2022-06-20 01:18:33,650 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:33,650 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 8(Long)
-2022-06-20 01:18:34,007 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:34,008 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====>  Preparing: Select * from Airports where id = ?
-2022-06-20 01:18:34,009 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====> Parameters: 5(Long)
-2022-06-20 01:18:34,308 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:34,309 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======> Parameters: 5(Long)
-2022-06-20 01:18:34,584 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <======      Total: 1
-2022-06-20 01:18:34,584 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - <====      Total: 1
-2022-06-20 01:18:34,585 [main] DEBUG com.solvd.flightfinder.interfaces.FlightMapper.getByDepartureAirportId - <==      Total: 6
-2022-06-20 01:18:34,585 [main] DEBUG com.solvd.flightfinder.interfaces.FlightMapper.getByArrivalAirportId - ==>  Preparing: Select * from Flights where arrival_airport_id = ?
-2022-06-20 01:18:34,586 [main] DEBUG com.solvd.flightfinder.interfaces.FlightMapper.getByArrivalAirportId - ==> Parameters: 4(Long)
-2022-06-20 01:18:34,891 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:34,892 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 3(Long)
-2022-06-20 01:18:35,165 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:35,166 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====>  Preparing: Select * from Airports where id = ?
-2022-06-20 01:18:35,166 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - ====> Parameters: 3(Long)
-2022-06-20 01:18:35,486 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======>  Preparing: Select * from Cities where id = ?
-2022-06-20 01:18:35,487 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - ======> Parameters: 3(Long)
-2022-06-20 01:18:35,822 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========>  Preparing: Select * from Countries where id = ?
-2022-06-20 01:18:35,823 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - ========> Parameters: 2(Long)
-2022-06-20 01:18:36,145 [main] DEBUG com.solvd.flightfinder.interfaces.CountryMapper.getById - <========      Total: 1
-2022-06-20 01:18:36,146 [main] DEBUG com.solvd.flightfinder.interfaces.CityMapper.getById - <======      Total: 1
-2022-06-20 01:18:36,146 [main] DEBUG com.solvd.flightfinder.interfaces.AirportMapper.getById - <====      Total: 1
-2022-06-20 01:18:36,146 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:36,147 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 2(Long)
-2022-06-20 01:18:36,540 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:36,543 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====>  Preparing: Select * from Airlines where id = ?
-2022-06-20 01:18:36,543 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - ====> Parameters: 7(Long)
-2022-06-20 01:18:37,235 [main] DEBUG com.solvd.flightfinder.interfaces.AirlineMapper.getById - <====      Total: 1
-2022-06-20 01:18:37,236 [main] DEBUG com.solvd.flightfinder.interfaces.FlightMapper.getByArrivalAirportId - <==      Total: 7
-2022-06-20 01:18:37,241 [main] INFO  com.solvd.flightfinder.ui.finalmenu.FinalMenu - Direct Flight options:
-2022-06-20 01:18:37,250 [main] INFO  com.solvd.flightfinder.ui.finalmenu.FinalMenu - flight: 23464 from: Sidney to: Minsk city.
-
-2022-06-20 01:18:37,250 [main] INFO  com.solvd.flightfinder.ui.finalmenu.FinalMenu - flight: 62008 from: Sidney to: Minsk city.
-
-2022-06-20 01:18:37,250 [main] INFO  com.solvd.flightfinder.ui.finalmenu.FinalMenu - Connection Flight options:
-2022-06-20 01:18:37,258 [main] INFO  com.solvd.flightfinder.ui.finalmenu.FinalMenu - option: 1 => flight: 26329 from: Sidney city to: Cordoba city. 
-and flight : 17896 from: Cordoba city to: Minsk city. 
-
-2022-06-20 01:18:37,258 [main] INFO  com.solvd.flightfinder.ui.finalmenu.FinalMenu - option: 2 => flight: 26329 from: Sidney city to: Cordoba city. 
-and flight : 62187 from: Cordoba city to: Minsk city. 
-
-2022-06-20 01:18:37,258 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Show shortest fly.
-2022-06-20 01:18:37,258 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Show cheapest fly.
-2022-06-20 01:18:37,258 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Exit.
-2022-06-20 01:18:39,283 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 1
-2022-06-20 01:18:39,287 [main] INFO  com.solvd.flightfinder.utils.FilterUtil - The cheapest travel option is the direct flight: 23464 with a price of: 750
+2022-06-20 08:20:09,092 [main] INFO  com.solvd.flightfinder.ui.airportselection.AirportSelection - ------Welcome to flight finder------
+2022-06-20 08:20:09,174 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2022-06-20 08:20:09,179 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2022-06-20 08:20:09,179 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2022-06-20 08:20:09,179 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2022-06-20 08:20:09,179 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2022-06-20 08:20:09,252 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Login.
+2022-06-20 08:20:09,252 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Create an account.
+2022-06-20 08:20:09,252 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Exit.
+2022-06-20 08:20:13,980 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 0
+2022-06-20 08:20:13,989 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2022-06-20 08:20:16,925 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2075372030.
+2022-06-20 08:20:16,926 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7bb3a9fe]
+2022-06-20 08:20:17,197 [main] DEBUG com.solvd.flightfinder.interfaces.PassengerMapper.getById - ==>  Preparing: Select * from Passengers where id = ?
+2022-06-20 08:20:17,225 [main] DEBUG com.solvd.flightfinder.interfaces.PassengerMapper.getById - ==> Parameters: 2(Long)
+2022-06-20 08:20:17,522 [main] DEBUG com.solvd.flightfinder.interfaces.PassengerMapper.getById - <==      Total: 1
+2022-06-20 08:20:17,525 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Check flights..
+2022-06-20 08:20:17,525 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Purchase flight..
+2022-06-20 08:20:17,525 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Exit.
+2022-06-20 08:20:24,981 [main] INFO  com.solvd.flightfinder.ui.AbstractMenu - Chosen option: 0
+2022-06-20 08:20:24,987 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 0- Set Origin..
+2022-06-20 08:20:24,988 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 1- Set Destination..
+2022-06-20 08:20:24,988 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 2- Go to the Main Menu..
+2022-06-20 08:20:24,988 [main] INFO  com.solvd.flightfinder.ui.AbstractMenuEnum - 3- Exit.
