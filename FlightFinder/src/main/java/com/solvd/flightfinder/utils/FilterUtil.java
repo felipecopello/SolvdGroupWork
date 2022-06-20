@@ -10,6 +10,7 @@ import java.util.List;
 
 public class FilterUtil {
     private final static Logger LOGGER = LogManager.getLogger(FilterUtil.class);
+
     //gets the total of price and distance from a flights list
     public static List<FlightWithConnection> joinFlights(List<FlightWithConnection> flightList) {
         int price = 0;
@@ -21,7 +22,7 @@ public class FilterUtil {
             Airport departure2 = flight.getArrivalFlight().getDepartureAirport();
             Airport arrival2 = flight.getArrivalFlight().getArrivalAirport();
             distance = distance + GeoDistanceCalculator.distance(departure1.getLatitude(), departure1.getLongitude(), arrival1.getLatitude(), arrival1.getLongitude()) +
-            GeoDistanceCalculator.distance(departure2.getLatitude(),departure2.getLongitude(),arrival2.getLatitude(),arrival2.getLongitude());
+                    GeoDistanceCalculator.distance(departure2.getLatitude(), departure2.getLongitude(), arrival2.getLatitude(), arrival2.getLongitude());
             String distanceString = String.valueOf(distance);
             flight.setFlightDistance(distanceString);
         }
@@ -59,9 +60,9 @@ public class FilterUtil {
         LOGGER.info("The shortest travel option is " + optionNumber + " with a distance of: " + distance);
     }
 
-    public static void selectPrice(List<FlightWithConnection> fwc, List<Flight> f){
+    public static void selectPrice(List<FlightWithConnection> fwc, List<Flight> f) {
         long cheapestId = 0;
-        long cheapestArrivalId= 0;
+        long cheapestArrivalId = 0;
         long cheapestDirectId = 0;
         int price = fwc.get(0).getPrice();
         for (FlightWithConnection flightsWithConnection : fwc) {
@@ -78,11 +79,11 @@ public class FilterUtil {
                 cheapestDirectId = flight.getFlightId();
             }
         }
-        if (directPrice<price){
+        if (directPrice < price) {
             LOGGER.info("The cheapest travel option is the direct flight: " + cheapestDirectId + " with a price of: "
                     + directPrice);
-        } else{
-            LOGGER.info("The cheapest travel option is the combination flight: " + cheapestId + "and :" + cheapestArrivalId +" with a price of: "
+        } else {
+            LOGGER.info("The cheapest travel option is the combination flight: " + cheapestId + "and :" + cheapestArrivalId + " with a price of: "
                     + price);
         }
     }

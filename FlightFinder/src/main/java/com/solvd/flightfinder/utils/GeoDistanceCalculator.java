@@ -18,11 +18,11 @@ public class GeoDistanceCalculator {
         }
     }
 
-    public static double distanceFromAirport(Airport origin, Airport destination){
+    public static double distanceFromAirport(Airport origin, Airport destination) {
         double originLatitude = origin.getLatitude();
         double originLongitude = origin.getLongitude();
         double destinationLatitude = destination.getLatitude();
         double destinationLongitude = origin.getLongitude();
-        return(distance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+        return (distance(originLatitude, originLongitude, destinationLatitude, destinationLongitude));
     }
 }

@@ -10,6 +10,7 @@ import java.sql.SQLException;
 public class Runner {
     private static final Logger LOGGER = LogManager.getLogger(Runner.class);
 
+
     public static void main(String[] args) throws SQLException {
         Messages.logo();
         Messages.welcomeMessage();

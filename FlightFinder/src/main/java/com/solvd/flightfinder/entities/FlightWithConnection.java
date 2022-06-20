@@ -1,9 +1,14 @@
 package com.solvd.flightfinder.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 import java.util.List;
 
+@XmlRootElement(name = "flightWithConnection")
+@XmlType(propOrder = {"departureFlight", "arrivalFlight", "flightDistance", "price"})
 public class FlightWithConnection {
     @JsonProperty
     private Flight departureFlight;
@@ -35,6 +40,7 @@ public class FlightWithConnection {
         return flightDistance;
     }
 
+    @XmlElement(name = "flightDistance")
     public void setFlightDistance(String flightDistance) {
         this.flightDistance = flightDistance;
     }
@@ -43,6 +49,7 @@ public class FlightWithConnection {
         return price;
     }
 
+    @XmlElement(name = "price")
     public void setPrice(int price) {
         this.price = price;
     }
@@ -51,6 +58,7 @@ public class FlightWithConnection {
         return arrivalFlight;
     }
 
+    @XmlElement(name = "arrivalFlight")
     public void setArrivalFlight(Flight arrivalFlight) {
         this.arrivalFlight = arrivalFlight;
     }
@@ -59,6 +67,7 @@ public class FlightWithConnection {
         return departureFlight;
     }
 
+    @XmlElement(name = "departureFlight")
     public void setDepartureFlight(Flight departureFlight) {
         this.departureFlight = departureFlight;
     }
@@ -68,5 +77,4 @@ public class FlightWithConnection {
         return "FlightWithConnection [departureFlight=" + departureFlight + ", arrivalFlight=" + arrivalFlight
                 + ", flightDistance=" + flightDistance + ", price=" + price + "]";
     }
-
 }

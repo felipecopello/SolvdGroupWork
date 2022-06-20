@@ -4,7 +4,6 @@ import com.solvd.flightfinder.interfaces.*;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-
 public class MyBatisFactory {
 
     private static SqlSessionFactory factory = SqlSessionFactoryUtil.getInstance();
