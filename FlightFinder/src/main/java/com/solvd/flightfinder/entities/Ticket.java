@@ -40,7 +40,6 @@ public class Ticket {
     }
 
 
-
     @XmlElement(name = "flight")
     public void setFlight(FlightWithConnection flight) {
         this.flight = flight;
