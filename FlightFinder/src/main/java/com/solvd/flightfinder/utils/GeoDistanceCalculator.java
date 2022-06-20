@@ -1,5 +1,7 @@
 package com.solvd.flightfinder.utils;
 
+import com.solvd.flightfinder.entities.Airport;
+
 public class GeoDistanceCalculator {
 
     public static double distance(double lat1, double lon1, double lat2, double lon2) {
@@ -16,4 +18,11 @@ public class GeoDistanceCalculator {
         }
     }
 
+    public static double distanceFromAirport(Airport origin, Airport destination){
+        double originLatitude = origin.getLatitude();
+        double originLongitude = origin.getLongitude();
+        double destinationLatitude = destination.getLatitude();
+        double destinationLongitude = origin.getLongitude();
+        return(distance(originLatitude,originLongitude,destinationLatitude,destinationLongitude));
+    }
 }

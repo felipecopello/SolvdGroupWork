@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Airport {
-	@JsonProperty
-	private long airportId;
-	@JsonProperty
-	private String name;
-	@JsonProperty
-	private float latitude;
-	@JsonProperty
-	private float longitude;
-	@JsonProperty
-	private City cityLocation;
-	public List<Flight> flights = new ArrayList<Flight>();
+    public List<Flight> flights = new ArrayList<Flight>();
+    @JsonProperty
+    private long airportId;
+    @JsonProperty
+    private String name;
+    @JsonProperty
+    private float latitude;
+    @JsonProperty
+    private float longitude;
+    @JsonProperty
+    private City cityLocation;
 
     public Airport() {
     }

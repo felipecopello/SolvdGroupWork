@@ -3,10 +3,10 @@ package com.solvd.flightfinder.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Airline {
-	@JsonProperty
-	private long airlineId;
-	@JsonProperty
-	private String name;
+    @JsonProperty
+    private long airlineId;
+    @JsonProperty
+    private String name;
 
     public Airline() {
     }

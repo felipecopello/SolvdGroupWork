@@ -3,7 +3,8 @@ package com.solvd.flightfinder.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.solvd.flightfinder.Runner;
-import com.solvd.flightfinder.entities.*;
+import com.solvd.flightfinder.entities.Passenger;
+import com.solvd.flightfinder.entities.Ticket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

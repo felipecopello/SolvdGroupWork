@@ -3,31 +3,31 @@ package com.solvd.flightfinder.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Flight {
-	@JsonProperty
-	private long flightId;
-	@JsonProperty
-	private Airport departureAirport;
-	@JsonProperty
-	private Airport arrivalAirport;
-	@JsonProperty
-	private int price;
-	@JsonProperty
-	private Airline airline;
+    @JsonProperty
+    private long flightId;
+    @JsonProperty
+    private Airport departureAirport;
+    @JsonProperty
+    private Airport arrivalAirport;
+    @JsonProperty
+    private int price;
+    @JsonProperty
+    private Airline airline;
     private String flightDuration;
     private int airlineId;
 
     public Flight() {
     }
 
-	public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDuration, int price,
-			int airlineId) {
-		this.flightId = flightId;
-		this.departureAirport = departureAirport;
-		this.arrivalAirport = arrivalAirport;
-		this.flightDuration = flightDuration;
-		this.price = price;
-		this.airlineId = airlineId;
-	}
+    public Flight(long flightId, Airport departureAirport, Airport arrivalAirport, String flightDuration, int price,
+                  int airlineId) {
+        this.flightId = flightId;
+        this.departureAirport = departureAirport;
+        this.arrivalAirport = arrivalAirport;
+        this.flightDuration = flightDuration;
+        this.price = price;
+        this.airlineId = airlineId;
+    }
 
     public long getFlightId() {
         return flightId;
@@ -53,13 +53,13 @@ public class Flight {
         this.arrivalAirport = arrivalAirport;
     }
 
-	public String getFlightDuration() {
-		return flightDuration;
-	}
+    public String getFlightDuration() {
+        return flightDuration;
+    }
 
-	public void setFlightDuration(String flightDuration) {
-		this.flightDuration = flightDuration;
-	}
+    public void setFlightDuration(String flightDuration) {
+        this.flightDuration = flightDuration;
+    }
 
     public int getPrice() {
         return price;

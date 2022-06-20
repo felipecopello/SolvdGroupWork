@@ -3,44 +3,44 @@ package com.solvd.flightfinder.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Passenger {
-	@JsonProperty
-	private int passengerId;
-	@JsonProperty
-	private String name;
-	@JsonProperty
-	private int age;
-	private long origin;
-	private long destination;
+    @JsonProperty
+    private int passengerId;
+    @JsonProperty
+    private String name;
+    @JsonProperty
+    private int age;
+    private long origin;
+    private long destination;
 
 
-	public Passenger() {
-	}
+    public Passenger() {
+    }
 
-	public Passenger(int passengerId, String name, int age) {
-		this.passengerId = passengerId;
-		this.name = name;
-		this.age = age;
-	}
+    public Passenger(int passengerId, String name, int age) {
+        this.passengerId = passengerId;
+        this.name = name;
+        this.age = age;
+    }
 
-	public int getPassengerId() {
-		return passengerId;
-	}
+    public int getPassengerId() {
+        return passengerId;
+    }
 
-	public void setPassengerId(int passengerId) {
-		this.passengerId = passengerId;
-	}
+    public void setPassengerId(int passengerId) {
+        this.passengerId = passengerId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getAge() {
-		return age;
-	}
+    public int getAge() {
+        return age;
+    }
 
     public void setAge(int age) {
         this.age = age;

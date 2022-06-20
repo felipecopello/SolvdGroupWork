@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class FlightWithConnection {
-	@JsonProperty
-	private Flight departureFlight;
-	@JsonProperty
-	private Flight arrivalFlight;
-	@JsonProperty
-	private String flightDistance;
-	@JsonProperty
-	private int price;
+    @JsonProperty
+    private Flight departureFlight;
+    @JsonProperty
+    private Flight arrivalFlight;
+    @JsonProperty
+    private String flightDistance;
+    @JsonProperty
+    private int price;
 
     public FlightWithConnection() {
     }
