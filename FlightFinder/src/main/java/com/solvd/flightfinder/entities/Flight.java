@@ -2,6 +2,13 @@ package com.solvd.flightfinder.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "flight")
+@XmlType(propOrder = { "flightId", "departureAirport", "arrivalAirport", "flightDistance", "price", "airline" })
 public class Flight {
 	@JsonProperty
 	private long flightId;
@@ -32,6 +39,7 @@ public class Flight {
 		return flightId;
 	}
 
+	@XmlAttribute
 	public void setFlightId(long flightId) {
 		this.flightId = flightId;
 	}
@@ -40,6 +48,7 @@ public class Flight {
 		return departureAirport;
 	}
 
+	@XmlElement(name = "departureAirport")
 	public void setDepartureAirport(Airport departureAirport) {
 		this.departureAirport = departureAirport;
 	}
@@ -48,6 +57,7 @@ public class Flight {
 		return arrivalAirport;
 	}
 
+	@XmlElement(name = "arrivalAirport")
 	public void setArrivalAirport(Airport arrivalAirport) {
 		this.arrivalAirport = arrivalAirport;
 	}
@@ -56,6 +66,7 @@ public class Flight {
 		return flightDistance;
 	}
 
+	@XmlElement(name = "flightDuration")
 	public void setFlightDistance(String flightDuration) {
 		this.flightDistance = flightDuration;
 	}
@@ -64,15 +75,17 @@ public class Flight {
 		return price;
 	}
 
+	@XmlElement(name = "price")
 	public void setPrice(int price) {
 		this.price = price;
 	}
 
-	public Airline getAirlineId() {
+	public Airline getAirline() {
 		return airline;
 	}
 
-	public void setAirlineId(Airline airline) {
+	@XmlElement(name = "airline")
+	public void setAirline(Airline airline) {
 		this.airline = airline;
 	}
 
